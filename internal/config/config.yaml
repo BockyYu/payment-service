@@ -1,0 +1,18 @@
+app:
+  name: "Payment Gateway"
+  port: "8080"
+  mode: "debug"  # debug, release
+  api_key: "your-secret-api-key-here"
+
+database:
+  dsn: "host=localhost user=postgres password=postgres dbname=payment_gateway port=5432 sslmode=disable"
+
+providers:
+  adyen:
+    api_key: "your-adyen-api-key"
+    merchant_id: "your-merchant-id"
+    environment: "test"  # test, live
+  
+  stripe:
+    api_key: "your-stripe-api-key"
+    secret_key: "your-stripe-secret-key"
