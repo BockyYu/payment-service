@@ -13,13 +13,13 @@ A unified payment integration service.
 
 ### Using Docker Compose
 
-\`\`\`bash
+```bash
 docker-compose up
-\`\`\`
+```
 
 ### Local Development
 
-\`\`\`bash
+```bash
 # Install dependencies
 go mod download
 
@@ -28,12 +28,12 @@ docker-compose up postgres -d
 
 # Run application
 go run cmd/server/main.go
-\`\`\`
+```
 
 ## API Endpoints
 
 ### Create Payment
-\`\`\`bash
+```bash
 POST /api/v1/payments
 Headers:
   X-API-Key: your-api-key
@@ -46,31 +46,31 @@ Body:
   "provider": "mock",
   "customer_email": "customer@example.com"
 }
-\`\`\`
+```
 
 ### Get Payment
-\`\`\`bash
+```bash
 GET /api/v1/payments/:id
 Headers:
   X-API-Key: your-api-key
-\`\`\`
+```
 
 ### List Payments
-\`\`\`bash
+```bash
 GET /api/v1/payments?limit=20&offset=0
 Headers:
   X-API-Key: your-api-key
-\`\`\`
+```
 
 ### Cancel Payment
-\`\`\`bash
+```bash
 POST /api/v1/payments/:id/cancel
 Headers:
   X-API-Key: your-api-key
-\`\`\`
+```
 
 ### Refund Payment
-\`\`\`bash
+```bash
 POST /api/v1/payments/:id/refund
 Headers:
   X-API-Key: your-api-key
@@ -78,7 +78,7 @@ Body:
 {
   "amount": 50.00
 }
-\`\`\`
+```
 
 ## Configuration
 
